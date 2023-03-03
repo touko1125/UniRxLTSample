@@ -620,7 +620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &990357994
 Transform:
   m_ObjectHideFlags: 0
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ae0a11e232e46be8b7d10bb1e379c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerDisplayDef: {fileID: 990357995}
-  _tapCounterDef: {fileID: 990357998}
+  _timerDisplay: {fileID: 0}
+  _tapCounter: {fileID: 0}
 --- !u!114 &990357997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3034d30616b5741b8ba8412a1d4c458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tapDisplayDef: {fileID: 990357997}
+  _tapDisplay: {fileID: 0}
 --- !u!1 &1095658763
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,19 +770,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095658766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 990357998}
-        m_TargetAssemblyTypeName: TapCounterDef, Assembly-CSharp
-        m_MethodName: OnTapped
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1095658766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,6 +809,93 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095658763}
   m_CullTransparentMesh: 1
+--- !u!1 &1360147992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1360147997}
+  - component: {fileID: 1360147996}
+  - component: {fileID: 1360147995}
+  - component: {fileID: 1360147994}
+  - component: {fileID: 1360147993}
+  m_Layer: 0
+  m_Name: UniRx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1360147993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360147992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016c58a8a4a1341a5ac14c3cfd7c42fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapCounter: {fileID: 1360147996}
+  _tapText: {fileID: 2078285107}
+--- !u!114 &1360147994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360147992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c03b934cd02b40ec88db4a38d9a653b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerCounter: {fileID: 1360147995}
+  _timerText: {fileID: 62912887}
+--- !u!114 &1360147995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360147992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84f5e39f71bf40218001683440d907c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1360147996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360147992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adee13bc27163451d9ac491d83e969d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapButton: {fileID: 1095658765}
+--- !u!4 &1360147997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360147992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 380, y: 214, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522141967
 GameObject:
   m_ObjectHideFlags: 0
