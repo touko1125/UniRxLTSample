@@ -612,8 +612,10 @@ GameObject:
   - component: {fileID: 990357994}
   - component: {fileID: 990357996}
   - component: {fileID: 990357995}
+  - component: {fileID: 990357998}
+  - component: {fileID: 990357997}
   m_Layer: 0
-  m_Name: TimerScript
+  m_Name: Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,7 +648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timerText: {fileID: 62912887}
-  _timerCounter: {fileID: 990357996}
 --- !u!114 &990357996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +660,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ae0a11e232e46be8b7d10bb1e379c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerDisplayDef: {fileID: 990357995}
+  _tapCounterDef: {fileID: 990357998}
+--- !u!114 &990357997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990357993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f9f6e2603448f2975bfbcf27ad7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapText: {fileID: 2078285107}
+--- !u!114 &990357998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990357993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3034d30616b5741b8ba8412a1d4c458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapDisplayDef: {fileID: 990357997}
 --- !u!1 &1095658763
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +770,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095658766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 990357998}
+        m_TargetAssemblyTypeName: TapCounterDef, Assembly-CSharp
+        m_MethodName: OnTapped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1095658766
 MonoBehaviour:
   m_ObjectHideFlags: 0

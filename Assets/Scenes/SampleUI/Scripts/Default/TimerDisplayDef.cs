@@ -7,16 +7,8 @@ public class TimerDisplayDef : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timerText;
 
-    [SerializeField] private TimerCounterDef _timerCounter;
-
-    // Update is called once per frame
-    void Update()
+    public void DisplayTimer(float time)
     {
-        DisplayTimer();
-    }
-
-    private void DisplayTimer()
-    {
-        _timerText.text = "TIMER : " + _timerCounter.Timer.ToString("00.00");
+        _timerText.text = "TIMER : " + time.ToString("00.00");
     }
 }
