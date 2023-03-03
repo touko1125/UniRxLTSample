@@ -7,8 +7,8 @@ public class TimerCounterDef : MonoBehaviour
     private float _timer = 0.0f;
     public float Timer => _timer;   //timerの読み取り専用プロパティ
 
-    [SerializeField] private TimerDisplayDef _timerDisplayDef;
-    [SerializeField] private TapCounterDef _tapCounterDef;
+    [SerializeField] private TimerDisplayDef _timerDisplay;
+    [SerializeField] private TapCounterDef _tapCounter;
     void Start()
     {
         _timer = 30.0f;
@@ -29,10 +29,10 @@ public class TimerCounterDef : MonoBehaviour
         //タップの入力の受け取りを停止
         if (_timer < 0)
         {
-            _tapCounterDef.StopTap = true;
+            _tapCounter.StopTap = true;
         }
 
         //表示
-        _timerDisplayDef.DisplayTimer(_timer);
+        _timerDisplay.DisplayTimer(_timer);
     }
 }

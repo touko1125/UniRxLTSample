@@ -14,7 +14,7 @@ public class TapCounterDef : MonoBehaviour
         set { _stopTap = value; }
     }
 
-    [SerializeField] private TapDisplayDef _tapDisplayDef;
+    [SerializeField] private TapDisplayDef _tapDisplay;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,6 @@ public class TapCounterDef : MonoBehaviour
         
         _tapNum++;
         
-        _tapDisplayDef.TapCountDisplay(_tapNum);
+        _tapDisplay.TapCountDisplay(_tapNum);
     }
 }
