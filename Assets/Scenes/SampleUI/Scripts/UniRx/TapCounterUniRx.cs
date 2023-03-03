@@ -14,7 +14,7 @@ public class TapCounterUniRx : MonoBehaviour
     void Start()
     {
         //ボタンの押し込みをイベントとして変換し、このイベントが発生時の処理をSubscribe内で指定
-        _tapButton.onClick.AsObservable().Subscribe(_ => PlusTapNum());
+        _tapButton.OnClickAsObservable().Subscribe(_ => PlusTapNum());
     }
 
     private void PlusTapNum()
